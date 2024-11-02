@@ -13,7 +13,7 @@ export function OrderList({ status }: { status: 'pending' | 'paid' }) {
   return (
     <div className="space-y-4">
       <h2 className="text-xl font-semibold text-gray-800">
-        {status === 'pending' ? 'Pending Orders' : 'Paid Orders'}
+        {status === 'pending' ? 'Pendente' : 'Finalizada'}
       </h2>
       <div className="space-y-4">
         {orders.map((order) => (
@@ -32,7 +32,7 @@ export function OrderList({ status }: { status: 'pending' | 'paid' }) {
                   ))}
                 </ul>
                 <p className="mt-2 font-semibold text-gray-800">
-                  Total: ${order.totalAmount.toFixed(2)}
+                  Total: R${order.totalAmount.toFixed(2)}
                 </p>
               </div>
               <button
@@ -46,12 +46,12 @@ export function OrderList({ status }: { status: 'pending' | 'paid' }) {
                 {status === 'pending' ? (
                   <>
                     <CheckCircle size={16} />
-                    Mark as Paid
+                    Marcar Pago
                   </>
                 ) : (
                   <>
                     <Clock size={16} />
-                    Mark as Pending
+                    Concluído
                   </>
                 )}
               </button>

@@ -42,7 +42,7 @@ export function SearchOrders() {
                     ))}
                   </ul>
                   <p className="mt-2 font-semibold text-gray-800">
-                    Total: ${order.totalAmount.toFixed(2)}
+                    Total: R${order.totalAmount.toFixed(2)}
                   </p>
                 </div>
               </div>

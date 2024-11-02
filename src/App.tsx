@@ -12,9 +12,9 @@ function App() {
 
   const navItems = [
     { id: 'dashboard', label: 'Dashboard', icon: LayoutDashboard },
-    { id: 'products', label: 'Products', icon: Package },
-    { id: 'orders', label: 'Orders', icon: ShoppingCart },
-    { id: 'search', label: 'Search', icon: Search },
+    { id: 'products', label: 'Produtos', icon: Package },
+    { id: 'orders', label: 'Pedido', icon: ShoppingCart },
+    { id: 'search', label: 'Buscar', icon: Search },
   ] as const;
 
   const handleNavClick = (tab: typeof activeTab) => {
@@ -29,7 +29,7 @@ function App() {
           <div className="flex justify-between h-16">
             <div className="flex items-center">
               <div className="flex-shrink-0 flex items-center">
-                <h1 className="text-xl font-bold text-gray-900">Order Management</h1>
+                <h1 className="text-xl font-bold text-gray-900">ClickComanda</h1>
               </div>
               <div className="hidden md:ml-6 md:flex md:space-x-8">
                 {navItems.map(({ id, label, icon: Icon }) => (

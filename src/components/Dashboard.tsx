@@ -20,7 +20,7 @@ export function Dashboard() {
         <div className="bg-white p-6 rounded-lg shadow-md">
           <div className="flex items-center justify-between">
             <div>
-              <p className="text-sm font-medium text-gray-600">Total Revenue</p>
+              <p className="text-sm font-medium text-gray-600">Valor Total</p>
               <p className="text-2xl font-bold text-gray-900">${totalRevenue.toFixed(2)}</p>
             </div>
             <div className="bg-green-100 p-3 rounded-full">
@@ -31,7 +31,7 @@ export function Dashboard() {
         <div className="bg-white p-6 rounded-lg shadow-md">
           <div className="flex items-center justify-between">
             <div>
-              <p className="text-sm font-medium text-gray-600">Products</p>
+              <p className="text-sm font-medium text-gray-600">Produtos</p>
               <p className="text-2xl font-bold text-gray-900">{products.length}</p>
             </div>
             <div className="bg-blue-100 p-3 rounded-full">
@@ -42,7 +42,7 @@ export function Dashboard() {
         <div className="bg-white p-6 rounded-lg shadow-md">
           <div className="flex items-center justify-between">
             <div>
-              <p className="text-sm font-medium text-gray-600">Pending Orders</p>
+              <p className="text-sm font-medium text-gray-600">Pendentes</p>
               <p className="text-2xl font-bold text-gray-900">{pendingOrders}</p>
             </div>
             <div className="bg-yellow-100 p-3 rounded-full">
@@ -53,7 +53,7 @@ export function Dashboard() {
         <div className="bg-white p-6 rounded-lg shadow-md">
           <div className="flex items-center justify-between">
             <div>
-              <p className="text-sm font-medium text-gray-600">Completed Orders</p>
+              <p className="text-sm font-medium text-gray-600">Concluídas</p>
               <p className="text-2xl font-bold text-gray-900">{completedOrders}</p>
             </div>
             <div className="bg-purple-100 p-3 rounded-full">

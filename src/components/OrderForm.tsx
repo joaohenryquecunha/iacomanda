@@ -57,17 +57,17 @@ export function OrderForm() {
 
   return (
     <form onSubmit={handleSubmit} className="space-y-4 bg-white p-6 rounded-lg shadow-md">
-      <h2 className="text-xl font-semibold text-gray-800">Create New Order</h2>
+      <h2 className="text-xl font-semibold text-gray-800">Criar Novo Pedido</h2>
       <div className="space-y-4">
         <input
           type="text"
           value={customerName}
           onChange={(e) => setCustomerName(e.target.value)}
-          placeholder="Customer Name"
+          placeholder="Nome do Pedido"
           className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent"
         />
         <div className="space-y-2">
-          <label className="block text-sm font-medium text-gray-700">Select Products</label>
+          <label className="block text-sm font-medium text-gray-700">Selecione os produtos</label>
           <select
             onChange={(e) => {
               const product = products.find((p) => p.id === e.target.value);
@@ -75,7 +75,7 @@ export function OrderForm() {
             }}
             className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent"
           >
-            <option value="">Select a product</option>
+            <option value="">Selecione os produtos</option>
             {products.map((product) => (
               <option key={product.id} value={product.id}>
                 {product.name} - ${product.price}
@@ -84,7 +84,7 @@ export function OrderForm() {
           </select>
         </div>
         <div className="space-y-2">
-          <h3 className="text-sm font-medium text-gray-700">Selected Products:</h3>
+          <h3 className="text-sm font-medium text-gray-700">Selecione os produtos:</h3>
           <ul className="space-y-2">
             {selectedProducts.map((product) => (
               <li key={product.id} className="flex items-center justify-between bg-gray-50 p-2 rounded-md">
@@ -121,7 +121,7 @@ export function OrderForm() {
             ))}
           </ul>
           <p className="text-lg font-semibold text-gray-800">
-            Total: ${selectedProducts.reduce((sum, product) => 
+            Total: R${selectedProducts.reduce((sum, product) => 
               sum + (product.price * product.quantity), 0).toFixed(2)}
           </p>
         </div>
@@ -130,7 +130,7 @@ export function OrderForm() {
           className="w-full flex items-center justify-center gap-2 bg-green-600 text-white px-4 py-2 rounded-md hover:bg-green-700 transition-colors"
         >
           <ShoppingCart size={20} />
-          Create Order
+          Criar Pedido
         </button>
       </div>
     </form>
